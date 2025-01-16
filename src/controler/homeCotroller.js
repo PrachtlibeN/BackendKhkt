@@ -34,7 +34,10 @@ const getDevices = async (req, res) => {
 const DevicesAdded = (req, res) => {
   crudServices.addDevices(req.body);
   console.log(req.body);
-  return res.send("hello");
+  return res.render("homepage.ejs");
+};
+const notice = (req, res) => {
+  return res.render("notice.ejs");
 };
 // Xuất các chức năng
 module.exports = {
@@ -46,4 +49,5 @@ module.exports = {
   getIntroduction,
   getDevices,
   DevicesAdded,
+  notice,
 };

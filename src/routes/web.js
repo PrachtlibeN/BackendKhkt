@@ -9,6 +9,7 @@ const {
   getIntroduction,
   getDevices,
   DevicesAdded,
+  notice,
 } = require("../controler/homeCotroller");
 let initwebroutes = (app) => {
   router.get("/", gethomepage);
@@ -19,6 +20,7 @@ let initwebroutes = (app) => {
   router.get("/introduction", getIntroduction);
   router.get("/addDevices", getDevices);
   router.post("/deviceinfo", DevicesAdded);
+  router.get("/notice", notice);
   return app.use("/", router);
 };
 
